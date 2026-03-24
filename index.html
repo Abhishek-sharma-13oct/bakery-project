@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/915783efc6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>RoyalBites</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="" class="logo"><img src="imagelogo.jpg" /></a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#cakes">Cakes</a>
+            <a href="#pastries">pastries</a>
+            <a href="#new-arrivals">New arrivals</a>
+            <a href="#about">About</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="icons">
+            <!-- Wishlist section -->
+            <div class="wishlist-icon"><i class="fa-regular fa-heart"></i></div>
+            <!-- Search section -->
+            <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <!-- Cart section -->
+            <div class="cart-icon"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
+                </svg>
+            </div>
+            <!-- Menu section -->
+            <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+        </div>
+        <!-- Search section -->
+        <div class="search-form">
+            <input type="search" name="search" id="search-box" placeholder="Search here.....">
+            <label for="search-box"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                        d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z" />
+                </svg>
+            </label>
+        </div>
+        <!-- cart container -->
+        <div class="cart-items-container">
+            <h1>Your Cart</h1>
+            <ul id="cart-items"></ul>
+            <p class="total">Total:
+                <span id="total-price">0.00</span>
+            </p>
+            <a href="../add/delivery.html" id="order-btn" class="btn">Order now</a>
+        </div>
+        <!-- Wishlist container -->
+        <div class="wishlist-items-container">
+            <h1>Your wishlist</h1>
+            <ul id="wishlist-items"></ul>
+        </div>
+    </header>
+    <!-- home section -->
+    <section class="home" id="home">
+        <div class="hero">
+            <h3>Calories don’t count when it’s your own baking!</h3>
+            <p>Sweet Delights, Guaranteed to Make You Smile.</p>
+            <a class="btn" href="../login/registration.html">Register now</a>
+        </div>
+        </div>
+    </section>
+    <!-- cake section -->
+    <section class="cakes" id="cakes">
+        <h3 class="title">our <span>cakes</span></h3>
+        <div class="wrapper">
+            <div class="cake-cart">
+                <img src="../image/blackforest.jpg" alt="Black Forest Cake">
+                <h3>black forest</h3>
+                <div class="price">&#x20A8 949.00/- <span>per kg</span></div>
+                <button class="btn" onclick="addToCart('Black forest', 949.00, '../image/blackforest.jpg')">Add to
+                    Cart</button>
+            </div>
+
+            <div class="cake-cart">
+                <img src="../image/whiteforest.webp">
+                <h3>white forest</h3>
+                <div class="price">&#x20A8 849.00/- <span>per kg</span></div>
+                <button onclick="addToCart('White forest', 849.00, '../image/whiteforest.webp')">Add to Cart</button>
+            </div>
+
+            <div class="cake-cart">
+                <img src="../image/chocolatedelight.jpg">
+                <h3>chocolate delight</h3>
+                <div class="price">&#x20A8 949.00/- <span>per kg</span></div>
+                <button onclick="addToCart('chocolate delight', 949.00, '../image/chocolatedelight.jpg')">Add to
+                    Cart</button>
+            </div>
+
+            <div class="cake-cart">
+                <img src="../image/Chocochipcake.jpg.webp">
+                <h3>choco chips cake</h3>
+                <div class="price">&#x20A8 899.00/- <span>per kg</span></div>
+                <button onclick="addToCart('choco chips cake', 899.00, '../image/Chocochipcake.jpg.webp')">Add to
+                    Cart</button>
+            </div>
+            <div class="cake-cart">
+                <img src="../image/mango.jpg">
+                <h3>Mango flavour cake</h3>
+                <div class="price">&#x20A8 799.00/- <span>per kg</span></div>
+                <button onclick="addToCart('Mango flavour cake', 799.00, '../image/mango.jpg')">Add to Cart</button>
+            </div>
+            <div class="cake-cart">
+                <img src="../image/mixfruit.jpg">
+                <h3>mixed fruit cake</h3>
+                <div class="price">&#x20A8 999.00/- <span>per kg</span></div>
+                <button onclick="addToCart('mixed fruit cake', 999.00, '../image/mixfruit.jpg')">Add to Cart</button>
+            </div>
+            <div class="cake-cart">
+                <img src="../image/pineapple.jpg">
+                <h3>pineapple cake</h3>
+                <div class="price">&#x20A8 699.00/- <span>per kg</span></div>
+                <button onclick="addToCart('pineapple cake', 699.00, '../image/pineapple.jpg')">Add to Cart</button>
+            </div>
+            <div class="cake-cart">
+                <img src="../image/biscoff.jpeg">
+                <h3>biscoff cheese cake</h3>
+                <div class="price">&#x20A8 1199.00/- <span>per kg</span></div>
+                <button onclick="addToCart('biscoff cheese cake', 1199.00, '../image/biscoff.jpeg')">Add to
+                    Cart</button>
+            </div>
+            <div class="cake-cart">
+                <img src="../image/butterskotch.webp">
+                <h3>butterscotch cake</h3>
+                <div class="price">&#x20A8 899.00/- <span>per kg</span></div>
+                <button onclick="addToCart('butterscotch cake', 899.00, '../image/butterskotch.webp')">Add to
+                    Cart</button>
+            </div>
+            <div class="cake-cart">
+                <img src="../image/purple.webp">
+                <h3>purple passion cake</h3>
+                <div class="price">&#x20A8 899.00/- <span>per kg</span></div>
+                <button onclick="addToCart('purple passion cake', 899.00, '../image/purple.webp')">Add to Cart</button>
+            </div>
+            <div class="cake-cart">
+                <img src="../image/chocolatecake.webp">
+                <h3>chocolate cake</h3>
+                <div class="price">&#x20A8 799.00/- <span>per kg</span></div>
+                <button onclick="addToCart('chocolate cake', 799.00, '../image/chocolatecake.webp')">Add to
+                    Cart</button>
+            </div>
+            <div class="cake-cart">
+                <img src="../image/bluberrycake.webp">
+                <h3>blueberry cake</h3>
+                <div class="price">&#x20A8 899.00/- <span>per kg</span></div>
+                <button onclick="addToCart('blueberry cake', 899.00, '../image/bluberrycake.webp')">Add to Cart</button>
+            </div>
+            <div class="cake-cart">
+                <img src="../image/heartcake.jpg">
+                <h3>heart glaze cake</h3>
+                <div class="price">&#x20A8 1099.00/- <span>per kg</span></div>
+                <button onclick="addToCart('heart glaze cake', 1099.00, '../image/heartcake.jpg')">Add to Cart</button>
+            </div>
+            <div class="cake-cart">
+                <img src="../image/strawberrycake.jpg">
+                <h3>strawberry cake</h3>
+                <div class="price">&#x20A8 1299.00/- <span>per kg</span></div>
+                <button onclick="addToCart('strawberry cake', 1299.00, '../image/strawberrycake.jpg')">Add to
+                    Cart</button>
+            </div>
+            <div class="cake-cart">
+                <img src="../image/chocoswisscake.webp">
+                <h3>choco swiss roll cake</h3>
+                <div class="price">&#x20A8 1499.00/- <span>per kg</span></div>
+                <button onclick="addToCart('choco swiss roll cake', 1499.00, '../image/chocoswisscake.webp')">Add to
+                    Cart</button>
+            </div>
+            <div class="cake-cart">
+                <img src="../image/rashmalaicake.jpg">
+                <h3>rasmalai cake</h3>
+                <div class="price">&#x20A8 1399.00/- <span>per kg</span></div>
+                <button onclick="addToCart('rasmalai cake', 1399.00, '../image/rashmalaicake.jpg')">Add to Cart</button>
+            </div>
+            <div class="cake-cart">
+                <img src="../image/redvelvet.webp">
+                <h3>red velvet cake</h3>
+                <div class="price">&#x20A8 1599.00/- <span>per kg</span></div>
+                <button onclick="addToCart('red velvet cake', 1599.00, '../image/redvelvet.webp')">Add to Cart</button>
+            </div>
+            <div class="cake-cart">
+                <img src="../image/blue2.jpeg">
+                <h3>blue velvet cake</h3>
+                <div class="price">&#x20A8 1799.00/- <span>per kg</span></div>
+                <button onclick="addToCart('blue velvet cake', 1799.00, '../image/blue2.jpeg')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <!-- pastry section -->
+    <section class="pastries" id="pastries">
+        <h1 class="title">Our <span>pastries</span></h1>
+        <div class="wrapper">
+            <div class="pastries-cart">
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down"
+                        onclick="addToCart('Croissant', 69.00, '../image/croissant.jpg')"></a>
+                    <a class="fa-regular fa-heart"
+                        onclick="addProductToWishlist('Croissant', '../image/croissant.jpg', 69.00, 1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/croissant.jpg" />
+                </div>
+                <div class="content">
+                    <h3>Croissant</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="price">&#x20A8 69.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+            <div class="pastries-cart">
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down"
+                        onclick="addToCart('baklava', 149.00, '../image/baklava2.jpg')"></a>
+                    <a class="fa-regular fa-heart"
+                        onclick="addProductToWishlist('baklava', '../image/baklava2.jpg', 149.00,1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/baklava2.jpg" />
+                </div>
+                <div class="content">
+                    <h3>baklava</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="price">&#x20A8 149.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+            <div class="pastries-cart">
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down" onclick="addToCart('tart', 99.00, '../image/tart.jpg')"></a>
+                    <a class="fa-regular fa-heart"
+                        onclick="addProductToWishlist('tart', '../image/tart.jpg', 99.00, 1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/tart.jpg" />
+                </div>
+                <div class="content">
+                    <h3>tart</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="price">&#x20A8 99.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+            <div class="pastries-cart">
+
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down"
+                        onclick="addToCart('eclair', 179.00, '../image/eclair2.webp')"></a>
+                    <a class="fa-regular fa-heart"
+                        onclick="addProductToWishlist('eclair', '../image/eclair2.webp', 179.00, 1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/eclair2.webp" />
+                </div>
+                <div class="content">
+                    <h3>eclair</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="price">&#x20A8 179.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+            <div class="pastries-cart">
+
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down"
+                        onclick="addToCart('cannoli', 199.00, '../image/cannoli.avif')"></a>
+                    <a class="fa-regular fa-heart" onclick="addProductToWishlist('cannoli', '../image/cannoli.avif', 199.00, 1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/cannoli.avif" />
+                </div>
+                <div class="content">
+                    <h3>cannoli</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="price">&#x20A8 199.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+            <div class="pastries-cart">
+
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down"
+                        onclick="addToCart('chocolate mousse', 199.00, '../image/chocolatemousse.jpg')"></a>
+                    <a class="fa-regular fa-heart"
+                        onclick="addProductToWishlist('chocolate mousse', '../image/chocolatemousse.jpg', 199.00,1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/chocolatemousse.jpg" />
+                </div>
+                <div class="content">
+                    <h3>chocolate mousse</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="price">&#x20A8 199.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+            <div class="pastries-cart">
+
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down"
+                        onclick="addToCart('pastel de nata', 89.00, '../image/pasteldenata.jpg')"></a>
+                    <a class="fa-regular fa-heart"
+                        onclick="addProductToWishlist('pastel de nata', '../image/pasteldenata.jpg', 89.00,1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/pasteldenata.jpg" />
+                </div>
+                <div class="content">
+                    <h3>pastel de nata</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="price">&#x20A8 89.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+            <div class="pastries-cart">
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down"
+                        onclick="addToCart('macaron', 99.00, '../image/macaron2.webp')"></a>
+                    <a class="fa-regular fa-heart"
+                        onclick="addProductToWishlist('macaron', '../image/macaron2.webp', 99.00,1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/macaron2.webp" />
+                </div>
+                <div class="content">
+                    <h3>macaron</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="price">&#x20A8 99.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+            <div class="pastries-cart">
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down"
+                        onclick="addToCart('apple strudel', 149.00, '../image/applestrudel.webp')"></a>
+                    <a class="fa-regular fa-heart"
+                        onclick="addProductToWishlist('apple strudel', '../image/applestrudel.webp', 149.00,1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/applestrudel.webp" />
+                </div>
+                <div class="content">
+                    <h3>apple strudel</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="price">&#x20A8 149.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+            <div class="pastries-cart">
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down" onclick="addToCart('filo', 139.00, '../image/filo.jpg')"></a>
+                    <a class="fa-regular fa-heart" onclick="addProductToWishlist('filo', '../image/filo.jpg', 139.00, 1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/filo.jpg" />
+                </div>
+                <div class="content">
+                    <h3>filo</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <div class="price">&#x20A8 139.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+            <div class="pastries-cart">
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down"
+                        onclick="addToCart('palmier', 99.00, '../image/palmier.jpg')"></a>
+                    <a class="fa-regular fa-heart" onclick="addProductToWishlist('palmier', '../image/palmier.jpg', 99.00, 1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/palmier.jpg" />
+                </div>
+                <div class="content">
+                    <h3>palmier</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="price">&#x20A8 99.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+            <div class="pastries-cart">
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down"
+                        onclick="addToCart('concave', 99.00, '../image/concave.jpg')"></a>
+                    <a class="fa-regular fa-heart" onclick="addProductToWishlist('concave', '../image/concave.jpg', 99.00, 1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/concave.jpg" />
+                </div>
+                <div class="content">
+                    <h3>concave</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="price">&#x20A8 99.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+            <div class="pastries-cart">
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down"
+                        onclick="addToCart('chocolate puff pastry', 139.00, '../image/chocolate-pastry-puffs-5-2.jpg')"></a>
+                    <a class="fa-regular fa-heart" onclick="addProductToWishlist('chocolate puff pastry', '../image/chocolate-pastry-puffs-5-2.jpg', 139.00, 1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/chocolate-pastry-puffs-5-2.jpg" />
+                </div>
+                <div class="content">
+                    <h3>chocolate puff pastry</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="price">&#x20A8 139.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+            <div class="pastries-cart">
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down"
+                        onclick="addToCart('danish pastry', 99.00, '../image/danish-pastries.jpg')"></a>
+                    <a class="fa-regular fa-heart" onclick="addProductToWishlist('danish', '../image/danish-pastries.jpg', 99.00, 1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/danish-pastries.jpg" />
+                </div>
+                <div class="content">
+                    <h3>danish pastry</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="price">&#x20A8 99.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+            <div class="pastries-cart">
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down"
+                        onclick="addToCart('sand tarts pastry', 99.00, '../image/Sand-Tarts.jpg')"></a>
+                    <a class="fa-regular fa-heart" onclick="addProductToWishlist('sand tart pastry', '../image/Sand-Tarts.jpg', 99.00, 1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/Sand-Tarts.jpg" />
+                </div>
+                <div class="content">
+                    <h3>sand tarts pastry</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="price">&#x20A8 99.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+            <div class="pastries-cart">
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down"
+                        onclick="addToCart('tiramisu pastry', 199.00, '../image/tiramisu.webp')"></a>
+                    <a class="fa-regular fa-heart" onclick="addProductToWishlist('tiramisu pastry', '../image/tiramisu.webp', 199.00, 1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/tiramisu.webp" />
+                </div>
+                <div class="content">
+                    <h3>tiramisu pastry</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="price">&#x20A8 199.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+            <div class="pastries-cart">
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down"
+                        onclick="addToCart('Mille Feuille pastry', 199.00, '../image/Mille-Feuille.jpg')"></a>
+                    <a class="fa-regular fa-heart" onclick="addProductToWishlist('Mille Feuille pastry', '../image/Mille-Feuille.jpg', 199.00, 1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/Mille-Feuille.jpg" />
+                </div>
+                <div class="content">
+                    <h3>Mille Feuille pastry</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="price">&#x20A8 199.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+            <div class="pastries-cart">
+                <div class="icons">
+                    <a class="fa-solid fa-cart-arrow-down"
+                        onclick="addToCart('donut', 99.00, '../image/Donuts.webp')"></a>
+                    <a class="fa-regular fa-heart" onclick="addProductToWishlist('donut', '../image/Donuts.webp', 99.00, 1)"></a>
+                </div>
+                <div class="img">
+                    <img src="../image/Donuts.webp" />
+                </div>
+                <div class="content">
+                    <h3>donut</h3>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="price">&#x20A8 99.00/- <span>per pcs</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- new arrivals -->
+    <section class="new-arrivals" id="new-arrivals">
+        <h1 class="title">new arrivals</h1>
+        <div class="wrapper">
+            <div class="cart">
+                <div class="img">
+                    <img src="../image/milkcookies.jpg">
+                </div>
+                <div class="content">
+                    <a>milk cookies</a>
+                    <p>
+                        Milk Cookies is a lip-smacking cookie recipe that is loaded with the intense taste of condensed
+                        milk, butter and caster sugar. Serve this mouth-watering recipe to your loved ones and delight
+                        their taste buds.
+                    </p>
+                    <a class="btn">explore</a>
+                </div>
+            </div>
+            <div class="cart">
+                <div class="img">
+                    <img src="../image/buttercookies.jpg">
+                </div>
+                <div class="content">
+                    <a>butter cookies</a>
+                    <p>
+                        Butter cookies at their most basic have no flavoring, but they are often flavored with vanilla,
+                        chocolate, and coconut, and/or topped with sugar crystals.
+                    </p>
+                    <a class="btn">explore</a>
+                </div>
+            </div>
+            <div class="cart">
+                <div class="img">
+                    <img src="../image/Fruit & Nut Cookies.jpg">
+                </div>
+                <div class="content">
+                    <a>Fruit & Nut Cookies</a>
+                    <p>
+                        Fruit and nut cookies are a sweet snack made with flour, sugar, butter, fruit, and nuts. They
+                        can be crispy and golden brown.
+                    </p>
+                    <a class="btn">explore</a>
+                </div>
+            </div>
+            <div class="cart">
+                <div class="img">
+                    <img src="../image/ginger-cookies.jpg">
+                </div>
+                <div class="content">
+                    <a>chewy ginger molasses cookies</a>
+                    <p>
+                        The ultimate ginger molasses cookies are made with fresh and ground ginger, brown butter and
+                        unsulphured molasses. The main role of molasses in cookies is adding a lot of flavor.
+                    </p>
+                    <a class="btn">explore</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about section -->
+    <section class="about" id="about">
+        <h1 class="title">about us</h1>
+        <div class="container">
+            <div class="img">
+                <img src="../image/about4.jpg">
+            </div>
+            <div class="content">
+                <h3>What Makes a Cake Perfect?</h3>
+                <p>Perfect Texture: Light, Moist, and Fluffy</p>
+                <p>The texture is a crucial aspect of any great cake. Your dream cake should be soft and fluffy where a
+                    moist crumb melts in your mouth the second you take a slice.</p>
+                <p>To achieve this ideal cake texture, one would be required to pay extra attention to detail with
+                    proper techniques, of course. The characteristics of a moist cake come from the right balance of
+                    ingredients and careful mixing....</p>
+                <a href="https://happybellybakes.com/blogs/characteristics-of-good-quality-cakes#:~:text=Perfect%20Texture%3A%20Light%2C%20Moist%2C,second%20you%20take%20a%20slice."
+                    class="btn">learn more</a>
+            </div>
+        </div>
+    </section>
+    <!-- review section -->
+    <section class="review" id="review">
+        <h1 class="title">customer's <span>review</span></h1>
+        <div class="wrapper">
+            <div class="review-cart">
+                <img src="../image/qoute6.png">
+                <p>"A showstopping cake that was the highlight of the party," "Beautifully decorated and incredibly
+                    moist," "Custom cake design exceeded expectations". </p>
+                <img class="customer" src="../image/jonney.webp">
+                <h3>Oliver</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+            </div>
+
+            <div class="review-cart">
+                <img src="../image/qoute6.png">
+                <p>"The cake was wonderful and tasted absolutely delicious. Everyone in the party was drooling for the
+                    cake and had more than one piece".</p>
+                <img class="customer" src="../image/amelie.webp">
+                <h3>Amelia</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <div class="review-cart">
+                <img src="../image/qoute6.png">
+                <p>"Delicate and flavorful pastries, a true work of art," "Pastry selection that caters to every taste,"
+                    "The perfect sweet treat for any occasion".</p>
+                <img class="customer" src="../image/will.webp">
+                <h3>will Smith</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <div class="review-cart">
+                <img src="../image/qoute6.png">
+                <p>"Best cake shop with excellent variety cakes.vanco flavour is one of their best cakes.passion fruit,
+                    bluebery,kiwi, strawberry flavours are also good.".</p>
+                <img class="customer" src="../image/Linda.jpg">
+                <h3>Linda</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact section -->
+    <section class="contact" id="contact">
+        <h1 class="title">contact us</h1>
+        <div class="contents">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114312.51528009187!2d80.25598103996941!3d26.44715007162656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c4770b127c46f%3A0x1778302a9fbe7b41!2sKanpur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1745913501751!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <form action="">
+                <h3>get in touch</h3>
+                <div class="input-box">
+                    <span class="fas fa-user"></span>
+                    <input type="text" name="name" placeholder="Name">
+                </div>
+
+                <div class="input-box">
+                    <span class="fas fa-envelope"></span>
+                    <input type="text" name="email" placeholder="Email">
+                </div>
+
+                <div class="input-box">
+                    <span class="fas fa-phone"></span>
+                    <input type="text" name="phone" placeholder="Phone Number">
+                </div>
+                <a href="" class="btn">contact us</a>
+            </form>
+        </div>
+    </section>
+    <!-- footer section -->
+    <footer class="footer">
+        <div class="social-media">
+            <a href="" class="fab fa-facebook-f"></a>
+            <a href="" class="fab fa-instagram"></a>
+            <a href="" class="fab fa-linkedin"></a>
+            <a href="" class="fab fa-whatsapp"></a>
+        </div>
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#cakes">Cakes</a>
+            <a href="#pastries">pastries</a>
+            <a href="#new-arrivals">New arrivals</a>
+            <a href="#about">About</a>
+            <a href="#review">Review</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="creadits">
+            created by <span>ABHISHEK SHARMA</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
